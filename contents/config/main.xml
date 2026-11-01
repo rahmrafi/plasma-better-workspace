@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kcfg xmlns="http://www.kde.org/standards/kcfg/1.0"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/standards/kcfg/1.0/kcfg.xsd">
+  <group name="">
+    <entry name="Mode" type="Int">
+      <label>0 = Auto, 1 = Manual</label>
+      <default>0</default>
+    </entry>
+    <entry name="MinDesktops" type="Int">
+      <label>Minimum number of workspaces</label>
+      <default>1</default>
+      <min>1</min>
+      <max>20</max>
+    </entry>
+    <entry name="MaxDesktops" type="Int">
+      <label>Maximum number of workspaces</label>
+      <default>20</default>
+      <min>1</min>
+      <max>20</max>
+    </entry>
+    <entry name="IgnoredClasses" type="String">
+      <label>Comma-separated window classes that never count as running applications</label>
+      <default></default>
+    </entry>
+  </group>
+</kcfg>
