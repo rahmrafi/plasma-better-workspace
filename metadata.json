@@ -4,17 +4,19 @@
         "Name": "Better Workspace",
         "Id": "better-workspace",
         "Description": "Dynamic virtual desktop management: Auto mode creates/removes workspaces for you, Manual mode gives you keyboard shortcuts.",
-        "License": "GPL-3.0-or-later",
-        "Version": "1.0.0",
-        "EnabledByDefault": false,
+        "Icon": "preferences-system-windows",
         "Authors": [
             {
-                "Name": "Author 1"
+                "Name": "Rahmadi Rafiansyah"
             },
             {
-                "Name": "Author 2"
+                "Name": "Claude - Anthropic"
             }
-        ]
+        ],
+        "Website": "https://github.com/rahmrafi/plasma-better-workspace",
+        "License": "GPL-3.0-or-later",
+        "Version": "1.1.0",
+        "EnabledByDefault": false
     },
     "X-KDE-ConfigModule": "kcm_kwin4_genericscripted",
     "X-Plasma-API": "javascript",

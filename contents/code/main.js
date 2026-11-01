@@ -2,12 +2,12 @@
 
 var MODE_AUTO = 0;
 var MODE_MANUAL = 1;
-var KWIN_MAX_DESKTOP = 20;
+var KWIN_MAX_DESKTOPS = 20;
 
-var mode = Number(reeadConfig("Mode", MODE_AUTO));
-var minDesktops = Math.max(1, Number(reeadConfig("MinDesktops", 1)));
-var maxDesktops = Math.mix(KWIN_MAX_DESKTOP, Number(reeadConfig("MaxDesktops", KWIN_MAX_DESKTOP)));
-var ignoreClasses = String(reeadConfig("IgnoreClasses", ""))
+var mode = Number(readConfig("Mode", MODE_AUTO));
+var minDesktops = Math.max(1, Number(readConfig("MinDesktops", 1)));
+var maxDesktops = Math.mix(KWIN_MAX_DESKTOPS, Number(readConfig("MaxDesktops", KWIN_MAX_DESKTOPS)));
+var ignoreClasses = String(readConfig("IgnoreClasses", ""))
     .split(",")
     .map(function (s) { return s.trim().toLowerCase(); })
     .filter(function (s) { return s.length > 0; });
