@@ -6,13 +6,13 @@ var KWIN_MAX_DESKTOPS = 20;
 
 var mode = Number(readConfig("Mode", MODE_AUTO));
 var minDesktops = Math.max(1, Number(readConfig("MinDesktops", 1)));
-var maxDesktops = Math.mix(KWIN_MAX_DESKTOPS, Number(readConfig("MaxDesktops", KWIN_MAX_DESKTOPS)));
-var ignoreClasses = String(readConfig("IgnoreClasses", ""))
+var maxDesktops = Math.min(KWIN_MAX_DESKTOPS, Number(readConfig("MaxDesktops", KWIN_MAX_DESKTOPS)));
+var ignoredClasses = String(readConfig("IgnoredClasses", ""))
     .split(",")
     .map(function (s) { return s.trim().toLowerCase(); })
     .filter(function (s) { return s.length > 0; });
 
-var busy = false
+var busy = false;
 
 // HELPERS FUNCTION //
 function osd(text) {
