@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>BetterWorkspaceConfig</class>
+ <widget class="QWidget" name="BetterWorkspaceConfig">
+  <layout class="QFormLayout" name="formLayout">
+   <item row="0" column="0">
+    <widget class="QLabel" name="label_mode">
+     <property name="text"><string>Default mode:</string></property>
+    </widget>
+   </item>
+   <item row="0" column="1">
+    <widget class="QComboBox" name="kcfg_Mode">
+     <item><property name="text"><string>Auto (workspaces managed automatically)</string></property></item>
+     <item><property name="text"><string>Manual (use keyboard shortcuts)</string></property></item>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label_min">
+     <property name="text"><string>Minimum workspaces:</string></property>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QSpinBox" name="kcfg_MinDesktops">
+     <property name="minimum"><number>1</number></property>
+     <property name="maximum"><number>20</number></property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label_max">
+     <property name="text"><string>Maximum workspaces:</string></property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QSpinBox" name="kcfg_MaxDesktops">
+     <property name="minimum"><number>1</number></property>
+     <property name="maximum"><number>20</number></property>
+    </widget>
+   </item>
+   <item row="3" column="0">
+    <widget class="QLabel" name="label_ignored">
+     <property name="text"><string>Ignored window classes:</string></property>
+    </widget>
+   </item>
+   <item row="3" column="1">
+    <widget class="QLineEdit" name="kcfg_IgnoredClasses">
+     <property name="placeholderText"><string>e.g. conky, plasmashell</string></property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>
