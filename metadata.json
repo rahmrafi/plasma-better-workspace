@@ -2,11 +2,11 @@
     "KPackageStructure": "KWin/Script",
     "KPlugin": {
         "Name": "Better Workspace",
-        "id": "better-workspace",
+        "Id": "better-workspace",
         "Description": "Dynamic virtual desktop management: Auto mode creates/removes workspaces for you, Manual mode gives you keyboard shortcuts.",
         "License": "GPL-3.0-or-later",
         "Version": "1.0.0",
-        "EnableByDefault": false,
+        "EnabledByDefault": false,
         "Authors": [
             {
                 "Name": "Author 1"
