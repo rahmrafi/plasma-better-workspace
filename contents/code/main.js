@@ -97,6 +97,7 @@ function rebalance(excludeWindow) {
     } finally {
         busy = false;
     }
+    renumber();
 }
 
 // MANUAL MODE FUNCTION //
@@ -154,7 +155,7 @@ workspace.windowRemoved.connect(function (w) {
     rebalance(w);
 });
 workspace.currentDesktopChanged.connect(function () { rebalance(null); });
-workspace.desktopsChanged.connect(function () { rebalance(null); });
+workspace.desktopsChanged.connect(function () { rebalance(null); renumber(); });
 
 registerShortcut("BetterWorkspaceCreate", "Better Workspace: Create Workspace (Manual mode)",
                  "Meta+Ctrl+D", createWorkspace);
@@ -166,5 +167,6 @@ registerShortcut("BetterWorkspaceToggleMode", "Better Workspace: Toggle Auto/Man
 var existing = workspace.windowList();
 for (var n = 0; n < existing.length; n++) trackWindow(existing[n]);
 rebalance(null);
+renumber();
 
 print("Better Workspace loaded, mode=" + (mode === MODE_AUTO ? "auto" : "manual"));
