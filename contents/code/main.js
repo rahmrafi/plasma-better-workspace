@@ -37,7 +37,7 @@ function desktopIndex(desktop) {
 }
 
 // SEQUENTIAL NAMES FUNCTION //
-function setDesktopName(dekstop, name) {
+function setDesktopName(desktop, name) {
     try { desktop.name = name; } catch (e) { }
     if (desktop.name !== name) {
         callDBus("org.kde.KWin", "/VirtualDesktopManager", "org.kde.KWin.VirtualDesktopManager", "setDesktopName", desktop.id, name);
@@ -50,7 +50,7 @@ function renumber() {
     for (var i = 0; i < desks.length; i++) {
         var d = desks[i];
         var wanted = "Desktop " + (i + 1);
-        if (d, name === wanted) continue;
+        if (d.name === wanted) continue;
         var isDefault = /^Desktop \d+$/.test(d.name);
         if (isDefault || renameCustom) setDesktopName(d, wanted);
     }
