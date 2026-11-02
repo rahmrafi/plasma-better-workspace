@@ -12,6 +12,9 @@ var ignoredClasses = String(readConfig("IgnoredClasses", ""))
     .map(function (s) { return s.trim().toLowerCase(); })
     .filter(function (s) { return s.length > 0; });
 
+var keepSequential = String(readConfig("KeepSequentialNames", true)) !== "false";
+var renameCustom = String(readConfig("RenameCustomNames", false)) !== "true";
+
 var busy = false;
 
 // HELPERS FUNCTION //
@@ -46,7 +49,7 @@ function setDesktopName(desktop, name) {
 
 function renumber() {
     if (!keepSequential) return;
-    var desks = workspace.dekstops;
+    var desks = workspace.desktops;
     for (var i = 0; i < desks.length; i++) {
         var d = desks[i];
         var wanted = "Desktop " + (i + 1);

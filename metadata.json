@@ -15,7 +15,7 @@
         ],
         "Website": "https://github.com/rahmrafi/plasma-better-workspace",
         "License": "GPL-3.0-or-later",
-        "Version": "1.3.0",
+        "Version": "1.3.2",
         "EnabledByDefault": false
     },
     "X-KDE-ConfigModule": "kcm_kwin4_genericscripted",
