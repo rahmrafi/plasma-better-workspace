@@ -13,7 +13,7 @@ var ignoredClasses = String(readConfig("IgnoredClasses", ""))
     .filter(function (s) { return s.length > 0; });
 
 var keepSequential = String(readConfig("KeepSequentialNames", true)) !== "false";
-var renameCustom = String(readConfig("RenameCustomNames", false)) !== "true";
+var renameCustom = String(readConfig("RenameCustomNames", false)) === "true";
 
 var busy = false;
 
